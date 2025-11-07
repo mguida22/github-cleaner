@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub PR Cleaner",
+  "version": "1.0.0",
+  "description": "Hides deployed to messages in GitHub PRs",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
