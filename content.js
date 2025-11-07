@@ -28,7 +28,8 @@
       ".TimelineItem",
       ".TimelineItem-body",
     ];
-    return root.querySelectorAll(selectors.join(","));
+    const context = root && root.querySelectorAll != null ? root : document;
+    return context.querySelectorAll(selectors.join(","));
   }
 
   function sweep(root = document) {
